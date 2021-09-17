@@ -1,5 +1,4 @@
-# ArchiTravel
-:airplane:
+# :airplane: ArchiTravel
 2020년 11월에 기획 및 제작한 건축물 랜선 여행 웹사이트
 - 건축가 소개
 - 건축물 소개
