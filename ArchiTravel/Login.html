@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Archi Travel Login</title>
+	<link href="Login_frame.css" rel="stylesheet">
+	<style>
+		/* 입력양식과 글자들의 위치를 중앙에 조정 */
+		.box_center {
+			height: 230px;
+			width: 250px;
+			margin-left: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- main 설정 -->
+	<main>
+		<!-- 로고 박스 -->
+	  	<div class="Login_logo">
+		  	<a href="Main.html"><img src="img/logo.jpg" width="350" height="70" alt=""/></a>
+		</div>
+		<!-- form 태그를 사용한 로그인 박스 -->
+	  	<div class="login_box">
+	    	<div class="box_center">
+			  	<form id="form1" name="form1" method="post">
+				  	<table>
+				  	 	<tr>
+							<td><input name="아이디" type="text" id="아이디" placeholder="아이디" size="32" maxlength="30"></td>  
+					 	</tr>
+					 	<tr>
+							<td><input name="비밀번호" type="password" id="비밀번호" placeholder="비밀번호" size="32" maxlength="30"></td>  
+					 	</tr>
+					 	<tr><td><br></td></tr>
+					 	<tr>
+							<td><input name="submit" type="image" id="submit" src="img/loginBox.png" width="240" height="50"></td>  
+					 	</tr>
+					 	<tr><td><br></td></tr>
+					 	<tr><td><hr></td></tr>
+					 	<tr><td><a href="SignUp.html">회원가입</a></td></tr>
+				  	</table>
+			  </form>
+			</div>
+	  	</div>
+	</main>
+	<!-- footer 설정 -->
+	<footer class="footer_bottom02">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</footer>
+</body>
+</html>

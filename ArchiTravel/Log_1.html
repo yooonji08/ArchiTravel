@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>log &gt; 독일 비트라 건축 여행</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<link rel="stylesheet" href="Page_frame.css">
+	<link rel="stylesheet" href="tran_bottom.css">
+	<link rel="stylesheet" href="log_frame.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<style>
+		/* 로그 요약 갤러리의 박스 색깔 설정 */
+		div.item:nth-child(n) {
+			background:#EEEEEE
+		}
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 150px;
+			height: 11550px;
+			padding-top: 105px;
+		}
+		/* 로그를 요약한 갤러리의 이전 박스로 가는 이미지 버튼 */
+		#left-button {
+			float: left;
+			margin-top: 500px;
+		}
+		/* 로그를 요약한 갤러리의 다음 박스로 가는 이미지 버튼 */
+		#right-button {
+			float: left;
+			margin-top: 500px;
+			margin-left: 110px;
+		}
+	</style>
+	<script>
+		/* 하트를 누르면 이미지와 숫자가 바뀌고, 다시 취소하면 원래대로 돌아가는 스크립트 */
+		heart = 0;
+		function toggleImg() {
+			if (heart == 0) {
+				heart = 1;
+				document.getElementById('like').src = "img/heart.png";
+				document.getElementById('change_heart').textContent = '33';
+			}
+			else {
+				heart = 0;
+				document.getElementById('like').src = "img/like.png";
+				document.getElementById('change_heart').textContent = '32';
+			};
+		};
+		/* 로그의 여행코스 요약한 갤러리 구현 이벤트 */
+		$(document).ready(function() {
+                var width = $('[data-role="slider"]').attr('data-width');
+                var height = $('[data-role="slider"]').attr('data-height');
+                var count = $('[data-role="slider"] div.item').length;
+
+                $('[data-role="slider"]').css({
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: width,
+                    height: height
+                }).find('.container').css({
+                    position: 'absolute',
+                    width: count * width,
+                    overflow: 'hidden'
+                }).find('.item').css({
+                    width: width,
+                    height: height,
+                    float: 'left'
+                });
+
+                var currentPage = 0;
+                var changePage = function() {
+                    $('[data-role="slider"] > .container').animate({
+                        left: -currentPage * width
+                    }, 500);
+                };
+
+                $('#left-button').click(function() { 
+                    if (currentPage > 0) {
+                        currentPage = currentPage - 1;
+                        changePage();
+                    }
+                });
+
+                $('#right-button').click(function() {
+                    if (currentPage < count - 1) {
+                        currentPage = currentPage + 1;
+                        changePage();
+                    }
+                });
+            });
+	</script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+		  <!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				<li><a href="Log.html">Log</a></li>
+				<li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				<li><a href="Course.html">Course</a>&nbsp;</li>
+				<li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		  </div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 게시글의 제목 박스 -->
+		<div class="course_box">
+			<h1>독일 비트라 캠퍼스 여행</h1>
+			<h5>독일&nbsp;&nbsp;당일여행&nbsp;&nbsp;가족여행</h5>
+			<!-- 제목 아래에 서브 메뉴들 박스 -->
+			<div class="sub_info_box">
+				<!-- 공유, 저장, 공감 박스 -->
+			  	<div class="icon_box">
+					<a href="https://twitter.com/intent/tweet?text=독일 비트라 캠퍼스 여행&url='Course_country.html'" target="_blank"><img src="img/share.png" width="30" height="30" alt=""/></a>
+					<img src="img/download.png" width="30" height="30" alt=""/>
+					<img onclick="toggleImg()" name="like" id="like" src="img/like.png" width="25" height="20">
+				</div>
+				<!-- 하트 누르면 숫자와 이미지 바뀌도록 설정 -->
+				<p id="change_heart">32</p>
+			  <h4><img src="img/profile.png" width="25" height="25" alt=""/>&nbsp;이○지&nbsp;&nbsp;&nbsp;2020.11.27.</h4>
+			</div>
+			<hr>
+		</div>
+		<!-- 이전 갤러리 코스 보기 버튼 -->
+		<img src="img/previous.png" id="left-button">
+		<!-- 로그의 사진과 설명 요약 갤러리 박스 -->
+		<div class="log_sum_text">
+			<img id="tape" src="img/tape.png" width="15" height="52" alt=""/>
+			<p id="tape_sum" style="font-size: 23px; color: #0070C0;">&nbsp;&nbsp;<strong>요약</strong></p>
+			<!-- 코스 설명 갤러리 -->
+			<div data-role="slider" data-width="850" data-height="700">
+				<div class="container">
+					<div class="item">
+						<img src="img/gallery/img_02.jpg" width="850" height="453">
+						<div class="course_text">
+						  <p style="font-size: 18px"><strong>Vitra Fire Station(비트라 소방서)</strong></p>
+						  <p style="font-size: 16px">당시 무명 건축가였던 자하 하디드에게 비트라가 설계를 제안해서 만들어진, 하디드가 독립적으로 지은 첫 번째 건축물이다. 비트라 소방서는 노출 콘크리트를 사용했고, 직선적이고 과감한 예각을 사용한 형태를 띄고 있다.</p>
+						  <br><br>
+						  <p style="color: #6F6F6F;">#자하 하디드 &nbsp; #가족여행 &nbsp; #당일여행 &nbsp; #노출 콘크리트 &nbsp; #직선</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/log/log_05.PNG" width="850" height="450">
+						<div class="course_text">
+						  <p style="font-size: 18px"><strong>Vitra Design Museum(비트라 디자인 박물관)</strong></p>
+						  <p style="font-size: 16px">프랭크 게리가 설계한 비트라 디자인 박물관은 가구회사 비트라가 전시한 작품들을 관람할 수 있는 곳이다. 건물에서 형태적인 불안함이 나타나며 깔끔하게 채색되어 있는 것이 특징이다.</p>
+						  <br><br>
+						  <p style="color: #9F9F9F;">#프랭크 게리 &nbsp; #가족여행 &nbsp; #당일여행 &nbsp; #불안함 </p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/log/log_13.PNG" width="850" height="450">
+						<div class="course_text">
+						  <p style="font-size: 18px"><strong>Vitra Conference Pavilion(컨퍼런스 파빌리온)</strong></p>
+						  <p style="font-size: 16px">컨퍼런스 파빌리온은 건축가 안도 다다오가 설계한 회의장 겸 명상센터이다. 안도 다다오가 즐겨 사용하는 노출 콘크리트와 자연과의 조화가 돋보인다.</p>
+						  <br><br>
+						  <p style="color: #9F9F9F;">#안도 다다오 &nbsp; #가족여행 &nbsp; #당일여행 &nbsp; #노출 콘크리트 </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 다음 갤러리 코스 보기 버튼 -->
+		<img src="img/next.png" id="right-button">
+		<!-- 게시글의 내용 박스 -->
+		<div class="log_text">
+			<p>가족들과 함께 독일의 남쪽에 있는 바일 암 라인에 다녀왔다. 바일 암 라인은 스위스 국경과 맞닿아 있는 곳이다.
+			대중 교통을 이용하기에는 거리가 꽤 있어서 렌트카를 타고오는 것을 추천한다.</p>
+			<br><br>
+		    <p>비트라는 독일의 전통적인 유명한 가구회사이다. 비트라 하우스는 비트라 공장부지 중의 일부에 지어진 건물인데,
+			1980년대부터 세계의 유명한 건축가들과 함께 단지 건물을 채우면서 비트라 캠퍼스라는 이름으로 불리게 되었다.</p>
+			<br><br>
+		    <img src="img/log/log_01.jpg" width="750" height="709" alt=""/>
+			<img src="img/log/log_04.PNG" width="750" height="420" alt=""/>
+			<br><br>
+			<p>비트라 캠퍼스에는 유명한 건축가들이 설계한 10가지의 건물이 자리하고 있다. 지금부터 소개할 건축물은 
+			비트라 소방서, 비트라 디자인 뮤지엄, 컨퍼런스 파빌리온이다. 위 건축물들은 독일인 가이드의 
+			도움을 받아 미리 예약해놓았다.</p>
+			<br><br><br>
+			<p><strong style="color: #0070C0; font-size: 23px;">Vitra Fire Station(비트라 소방서)</strong></p>
+			<p>Müllheimer Str. 56, 79576 Weil am Rhein, 독일</p>
+			<p>먼저 이 건축물은 건축가 자하 하디드가 설계한 비트라 소방서 이다. 당시 무명 건축가였으나, 비트라에서 제안을 
+			받아 설계를 했다.</p>
+			<br><br>
+			<img src="img/gallery/img_01.jpg" width="750" height="540" alt=""/>
+			<img src="img/log/log_02.PNG" width="750" height="424" alt=""/>
+			<br><br>
+			<p>건물에는 노출콘크리트와 커다란 창을 사용했고, 자하 하디드가 추구하는 사선을 건물에 반영했다. 건축물을 둘러보면
+			평탄한 지면과 수직적이고 수평적인 벽을 찾기 어려운 이유가 여기에 있다. 건물의 입구에 설치한 캐노피는 사람들의 
+			동선을 유도해주고, 캐노피 위에 얹혀있는 콘크리트는 예리한 예각을 띄고 있다.</p>
+			<br><br>
+		    <img src="img/log/log_03.PNG" width="420" height="237" alt=""/>&nbsp;<img src="img/log/log_19.PNG" width="420" height="237" alt=""/>
+			<br><br>
+			<p>내부도 외관처럼 사선을 이용한 공간을 많이 찾아볼 수 있다. 현재는 소방서가 아니라 전시공간으로 운영되고 있어서 
+			여러 사람들이 관람할 수 있다.</p>
+			<br><br><br><br>
+			<p><strong style="color: #0070C0; font-size: 23px;">Vitra Design Museum(비트라 디자인 박물관)</strong></p>
+			<p>Charles-Eames-Straße 2, 79576 Weil am Rhein, 독일</p>
+			<p>다음으로 방문한 곳은 프랭크 게리가 설계한 비트라 디자인 박물관이다.</p>
+			<br><br>
+		    <img src="img/log/log_05.PNG" width="750" height="423" alt=""/>
+			<br><br>
+			<p>건물의 외관을 살펴보면 깨끗하게 채색이 되어있어 사용한 재료의 모습을 보이지 않도록했다. 기하학적인 모양으로 생겼으며, 형태적인 불안함이 드러난다.</p>
+			<br><br>
+			<img src="img/log/log_06.PNG" width="420" height="370" alt=""/>&nbsp;<img src="img/log/log_07.PNG" width="420" height="370" alt=""/>
+			<br><br>
+			<p>주로 사람들이 건물의 외관을 보고 프랭크 게리는 해체주의적 성향을 갖고 있다고 말하는데, 본인의 생각은 이런 형태의 건축물은 만드는것은 게리의 성향일뿐 해체주의적인 성향을 안갖고 있다 생각한다.</p>
+			<br><br>
+			<img src="img/log/log_09.PNG" width="420" height="370" alt=""/>&nbsp;<img src="img/log/log_10.PNG" width="420" height="370" alt=""/>
+			<img src="img/log/log_11.PNG" width="420" height="370" alt=""/>&nbsp;<img src="img/log/log_12.PNG" width="420" height="370" alt=""/>
+		    <p>안쪽은 바깥과 다르게 정적인 느낌이 강하다.</p>
+			<p>해당 박물관에서는 다양한 전시회를 관람할 수 있으며, 기간이 있는 전시회도 자주 열린다. 주로 비트라 가구회사의 제품들을 전시해놓은 것을 볼 수 있다.</p>
+			<br><br><br><br>
+			<p><strong style="color: #0070C0; font-size: 23px;">Vitra Conference Pavilion(컨퍼런스 파빌리온)</strong></p>
+			<p>Charles-Eames-Straße 2, 79576 Weil am Rhein, 독일</p>
+			<p>마지막으로 방문한 컨퍼런스 파빌리온은 건축가 안도 다다오가 일본외의 나라에 설계한 최초의 건물이다. 이 건물은 회의장과 명상센터가 있는 곳으로 만들어졌다.</p>
+			<br><br>
+			<img src="img/log/log_13.PNG" width="750" height="369" alt=""/>
+			<img src="img/log/log_14.PNG" width="750" height="579" alt=""/>
+			<br><br>
+			<p>이 건물은 안도 다다오가 자주 사용하는 노출 콘크리트 벽과 자연이 조화롭게 나타내어진다. 그리고 막혀있는 벽이 사람들의 동선을 유도하는 방식을 적용했다.</p>
+			<br><br>
+			<img src="img/log/log_15.PNG" width="750" height="419" alt=""/>
+			<img src="img/log/log_16.PNG" width="750" height="419" alt=""/>
+			<img src="img/log/log_17.PNG" width="420" height="600" alt=""/>&nbsp;<img src="img/log/log_18.PNG" width="420" height="600" alt=""/>
+			<br><br>
+			<p>건물의 내부에서도 노출 콘크리트와 동선을 유도하는 좁은 길을 찾아 볼 수 있다. 커튼월 창호를 바닥부터 천장까지 하나의 유리로 설계한 것도 찾아 볼 수 있다.</p>
+			<br><br>
+			<p>이 곳, 비트라 캠퍼스는 매일 오전 10시에서 오후 6시까지 운영하고 있습니다. 티켓은 온라인이나 사전 예매는 불가능하고, 비트라 캠퍼스에서 직접 구매할 수 있으니 참고하여 즐거운 여행이 되시기를 바랍니다.</p>
+			<br><br><br><br>
+			<!-- 구글 지도로 건물간의 거리 보여주기 -->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d1929.9812176225637!2d7.615887163929229!3d47.60134793935619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e2!4m5!1s0x4791ba3d51416b0d%3A0xd7cb3fef18f5a581!2sVitra%20Fire%20Station%20by%20Zaha%20Hadid%2C%20M%C3%BCllheimer%20Str.%2056%2C%2079576%20Weil%20am%20Rhein%2C%20%EB%8F%85%EC%9D%BC!3m2!1d47.600431699999994!2d7.6147084!4m5!1s0x4791ba22bdba9593%3A0xd488b219a8ad159!2z64-F7J28IFdlaWwgYW0gUmhlaW4sIENoYXJsZXMtRWFtZXMtU3RyYcOfZSwg67mE7Yq46528IOuUlOyekOyduCDrrqTsp4Dsl4Q!3m2!1d47.601661799999995!2d7.6189167!4m5!1s0x4791ba173edae115%3A0x69b3e9a0d4f603f5!2sVitra%20Conference%20Pavilion%2C%20Charles-Eames-Stra%C3%9Fe%2C%20Weil%20am%20Rhein%2C%20%EB%8F%85%EC%9D%BC!3m2!1d47.6011373!2d7.6200811999999996!5e0!3m2!1sko!2skr!4v1606497560666!5m2!1sko!2skr" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<p><strong>정보 더보기</strong></p>
+			<ol>
+				<li><a href="Zaha Hadid_Archi_1.html"><u>비트라 소방서</u></a></li>
+				<li><a href="#"><u>비트라 디자인 박물관</u></a></li>
+				<li><a href="#"><u>온퍼런스 파빌리온</u></a></li>
+			</ol>
+			<br><br><br><br><br><br>
+			<hr>
+			<p><strong>TAG</strong> &nbsp;&nbsp; #가족여행 &nbsp; #홀로여행 &nbsp; #독일 &nbsp; <a href="Zaha Hadid.html">#자하 하디드</a> &nbsp; #프랭크 게리 &nbsp; #안도 다다오</p>
+			<hr>
+			<br>
+		    <p><strong style="font-size: 17px">관련 추천 여행지</strong></p>
+			<!-- 트랜지션을 사용하여 게시글 나타내기 -->
+			<div class="under_three_box">
+				<div class="under_box">
+					<img src="img/Zaha Hadid/DDP_3.jpg" width="275" height="170" alt=""/>
+					<div class="under_tran_box">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑
+						<p>동대문 디자인 플라자에 다녀왔어요.</p>
+						<br><br>
+						<p><a href="#">바로가기 →</a></p>
+					</div>
+				</div>
+				<p><a href="#">서울 도심속 건축물 탐방</a></p>
+			    <p style="font-size: 13px; color: #9F9F9F;">2020.11.28.</p>
+		    </div>
+		    <div class="under_three_box">
+				<div class="under_box">
+					<img src="img/log/log_24.PNG" width="275" height="170" alt=""/>
+					<div class="under_tran_box">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑
+						<p>일본 건축가인 안도 다다오는 제주도에 여러 건축물들을 설계했습니다.</p>
+						<br>
+						<p><a href="#">바로가기 →</a></p>
+					</div>
+				</div>
+				<p><a href="#">제주도로 떠나는 안도다다오 건축 여행</a></p>
+			    <p style="font-size: 13px; color: #9F9F9F;">2020.11.29.</p>
+		    </div>
+		    <div class="under_three_box">
+				<div class="under_box">
+					<img src="img/log/log_25.jpg" width="275" height="170" alt=""/>
+				  	<div class="under_tran_box">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑
+						<p>안도 다다오가 설계한 베니스 집은 건물의 천장이 뚫려있어서 물에 비친 나무의 모습을 볼 수 있습니다.</p>
+						<p><a href="#">바로가기 →</a></p>
+				  	</div>
+				</div>
+				<p><a href="#">일본 베니스 집에서 즐기는 풍경</a></p>
+			    <p style="font-size: 13px; color: #9F9F9F;">2020.11.29.</p>
+			</div>
+			<!-- 페이지 이동 박스 -->
+			<div id="page_box">
+				<p>
+					<a href="#"><img src="img/previous.png" width="20" height="21" alt=""/>이전&nbsp;&nbsp;</a>
+				  	<a href="#">&nbsp;&nbsp;다음<img src="img/next.png" width="20" height="20" alt=""/></a>
+				</p>
+			</div>
+			<p><strong style="font-size: 17px">댓글 2</strong></p>
+			<form>
+				<fieldset>
+				    <table>
+						<tr>
+							<td><input type="checkbox">&nbsp;익명<br><br></td>
+						</tr>
+						<tr>
+							<td><textarea name="댓글" cols="125" rows="5" id="댓글" placeholder="댓글을 입력해주세요." style="resize: none;"></textarea></td>
+						</tr>
+						<tr>
+							<td><input type="submit"></td>
+						</tr>
+				    </table>
+				  </fieldset>
+			</form>
+			<br>
+			<p><img src="img/log/log_icon_01.png" width="40" height="40" alt=""/>&nbsp;고양이 앞발</p>
+			<p>좋은 정보 감사합니다.<br>저희집 고양이와 함께 가보고 싶네요.</p>
+			<hr>
+			<p><img src="img/log/log_icon_02.png" width="40" height="40" alt=""/>&nbsp;방구석 건축가</p>
+			<p>재밌게 잘 읽었습니다. 정말 가보고 싶었던 곳이었는데, 덕분에 즐거운 랜선여행하고 갑니다.<br>코로나가 끝나면 꼭 가봐야겠어요.</p>
+		</div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

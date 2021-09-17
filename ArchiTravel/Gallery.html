@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Archi Travel &gt; Gallery</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="jquery.lightbox.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="jquery.lightbox.js"></script>
+	<style>
+		/* section 박스 */
+		section {
+			width: 1300px;
+			height: 1500px;
+		}/* 이미지들 위치 설정 박스 */
+		.img_light {
+			padding-top: 50px;
+			padding-left: 170px;
+		}
+		/* 선택가능한 입력양식 위치 설정 */
+		#opt_box {
+			padding-left: 170px;
+			padding-top: 150px;
+		}
+	</style>
+	<script>
+		/* 라이트박스 플러그인 이벤트 연결 */
+		$(document).ready(function() {
+			$('a.light').lightBox();
+        });
+    </script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+		  <!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				<li><a href="Log.html">Log</a></li>
+				<li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				<li><a href="Course.html">Course</a>&nbsp;</li>
+				<li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		  </div>
+	</header>
+	<!-- section 설정 -->
+	<section>
+		<!-- 선택가능한 입력양식 박스 -->
+		<div id="opt_box">
+			<!-- 건축가별로 건축물 목록에서 선택하면 해당 건축물 소개로 이동하는 입력 양식 -->
+			<select style="width: 220px" onchange="window.open(this.value)">
+				<optgroup label="Zaha Hadid">
+					<option value="Zaha Hadid_Archi_1.html">Vitra Fire Station (비트라 소방서)</option>
+					<option value="Zaha Hadid_Archi_2.html">Phaeno Science Center (파에노 과학 센터)</option>
+					<option value="Zaha Hadid_Archi_3.html">DDP (동대문 디지털 프라자)</option>
+					<option value="Zaha Hadid_Archi_4.html">Glasgow Riverside Museum of Transport (글래스고 리버사이드 교통 박물관)</option>
+					<option value="Zaha Hadid_Archi_5.html">Heydar Aliyev Center (하이드라 알리예프 문화 센터)</option>
+				</optgroup>
+			</select>
+		</div>
+		<!-- 사진 정렬 박스 -->
+	    <div class="img_light">
+		  <a class="light" href="img/Zaha Hadid/DDP.jpg"><img src="img/Zaha Hadid/DDP.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/DDP_2.jpg"><img src="img/Zaha Hadid/DDP_2.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/DDP_3.jpg"><img src="img/Zaha Hadid/DDP_3.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/DDP_4.jpg"><img src="img/Zaha Hadid/DDP_4.jpg" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/DDP_5.jpg"><img src="img/Zaha Hadid/DDP_5.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/DDP_6.jpg"><img src="img/Zaha Hadid/DDP_6.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/fire_1.PNG"><img src="img/Zaha Hadid/fire_1.PNG" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/fire_2.jpg"><img src="img/Zaha Hadid/fire_2.jpg" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/fire_3.jpg"><img src="img/Zaha Hadid/fire_3.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/fire_4.jpg"><img src="img/Zaha Hadid/fire_4.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/glasgow_1.jpg"><img src="img/Zaha Hadid/glasgow_1.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/glasgow_2.jpg"><img src="img/Zaha Hadid/glasgow_2.jpg" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/glasgow_3.jpg"><img src="img/Zaha Hadid/glasgow_3.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/glasgow_4.jpg"><img src="img/Zaha Hadid/glasgow_4.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/glasgow_5.jpg"><img src="img/Zaha Hadid/glasgow_5.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/heydar_1.jpg"><img src="img/Zaha Hadid/heydar_1.jpg" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/heydar_2.jpg"><img src="img/Zaha Hadid/heydar_2.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/heydar_3.jpg"><img src="img/Zaha Hadid/heydar_3.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/heydar_4.jpg"><img src="img/Zaha Hadid/heydar_4.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/heydar_5.jpg"><img src="img/Zaha Hadid/heydar_5.jpg" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/heydar_6.jpg"><img src="img/Zaha Hadid/heydar_6.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/heydar_7.jpg"><img src="img/Zaha Hadid/heydar_7.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/science_1.png"><img src="img/Zaha Hadid/science_1.png" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/science_2.png"><img src="img/Zaha Hadid/science_2.png" width="278" height="161"/></a>
+		  
+		  <a class="light" href="img/Zaha Hadid/science_3.png"><img src="img/Zaha Hadid/science_3.png" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/science_4.jpg"><img src="img/Zaha Hadid/science_4.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/science_5.jpg"><img src="img/Zaha Hadid/science_5.jpg" width="278" height="161"/></a>
+		  <a class="light" href="img/Zaha Hadid/science_6.jpg"><img src="img/Zaha Hadid/science_6.jpg" width="278" height="161"/></a>
+	  </div>
+	</section>
+	<footer>
+	  <div class="footer_box">
+		  <p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+          <p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+          <p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+          <p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+          <p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p></div>
+	</footer>
+</body>
+</html>

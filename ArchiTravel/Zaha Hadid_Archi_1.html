@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Zaha Hadid 건축물</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1750px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지바 설정 */
+		#page_number_box {
+			height: 20px;
+			width: 500px;
+			margin-top: 80px;
+			margin-left: 550px;
+		}
+	</style>
+	<!-- 타이머 함수를 사용하여 3초에 이미지가 1개 나타나는 애니메이션 구현 -->
+	<script>
+		window.onload = function() {
+		var count = 0;
+		var image = document.getElementById('image');
+		var frames = [
+			'img/Zaha Hadid/fire_1.png', 'img/Zaha Hadid/fire_2.jpg',
+			'img/Zaha Hadid/fire_3.jpg', 'img/Zaha Hadid/fire_4.jpg'
+		];
+		setInterval(function() {
+			image.src = frames[count % frames.length];
+			count = count + 1;
+		}, 3000/1);
+	};
+	</script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+			<!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				  <li><a href="Log.html">Log</a></li>
+				  <li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				  <li><a href="Course.html">Course</a>&nbsp;</li>
+				  <li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		</div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 건축가 선택할 수 있는 박스 -->
+		<div class="archi_box">
+			<hr>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>건축가</strong></td>
+					<td style="color: #444444"><a href="Zaha Hadid.html"><strong>자하 하디드</strong></a></td>
+					<td><a href="#">안도 다다오</a></td>
+					<td><a href="#">프랭크 게리</a></td>
+					<td><a href="#">노만 포스터</a></td>
+					<td><a href="#">아이 엠 페이</a></td>
+				</tr>
+			</table>
+			<hr>
+			<!-- 서브메뉴 아래에 메뉴 2개 박스 설정 -->
+			<table id="bottom_menu" cellpadding="5">
+				<tr>
+					<td><a href="Zaha Hadid_Archi_1.html"><strong>건축물</strong></a></td>
+					<td><a href="Zaha Hadid_map.html">지도</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 에니메이션 사진 박스 -->
+		<div class="archi_sum">
+			<img src="img/Zaha Hadid/fire_1.PNG" width="650" class="archi_sum_img" id="image">
+		</div>
+		<!-- 건축물 설명글 박스 -->
+		<div class="archi_text">
+			<p style="font-size: 20px"><strong>Vitra Fire Station(비트라 소방서)</strong>(1991-1993)</p>
+			<p style="font-size: 12px">Weil am Rhein, Germany(바일 암 라인, 독일)</p>
+			<br>
+			<p style="font-size: 14px"><strong>#노출 콘크리트 &nbsp; #직선적인 형태 &nbsp; #예각 사용 &nbsp; #해체주의</strong></p>
+			<p>비트라 소방서는 비트라 가구 공장에 만들어진 건축물로, 그 급각도로 상승하면서 급강하하는 형태는 주변의 어떠한 건축물보다도 강한 인상을 준다. 이 소방서는 현대적인 건축물에 대한 강한 의지를 지니고 있었던 회사 대표의 열정 덕분에 탄생한 건축물이다. 비트라 사(社) 대표인 알렉산더 본 베제삭은 독일의 스위스와 프랑스와의 경계선 부분에 있는 자신의 큰 공업 부지에 독창적인 건축물을 지어줄 감각 있는 젊은 건축가를 찾고 있었다. 그리고 런던에서 활동하는 이라크 출신의 젊은 건축가 자하 하디드가 그의 눈에 들어 이와 같은 현대 건축물의 진열장에 인상적인 건축물을 세웠다.</p>
+			<p>비트라 소방서는 하디드가 독립적으로 지은 첫 번째 건축물이었다. 런던의 건축 회사인 피터 쿡에서 경력을 쌓은 그녀는 대표적인 절대주의 예술가인 카시미르 말레비치와 미하일 체르니코브가 러시아 혁명의 혼란 시기에 만든 회화, 드로잉, 조각을 연구했고, 그것들로부터 자신의 건축 디자인을 위한 영감을 얻어냈다. 절대주의 회화에서 많은 영향을 받았음에도 불구하고, 여러 해 동안 건축물을 통해서 거의 드러나지 않다가 소방서 건축물을 통해 비로소 결과물로 실현되었다. 이 건축물은 하나의 긴 덩어리로 되어 있다. 그리고 그 위에 예각인 벽 날개가 달려 있다. 한쪽 끝은 크고 높은 지붕이 있는 소방차 공간이 있고, 다른 한쪽에는 2층으로 이뤄진 소방수 숙소와 지붕 테라스가 있다.</p>
+			<p>바일 암 라인 마을의 규모가 커짐에 따라, 시에서는 이곳에 더 큰 규모의 소방서를 지어야 했다. 그에 따라 하디드의 소방서는 더 이상 본래 용도대로 사용할 수 없게 되었고, 현재는 비트라 미술관 소장품의 상설전이 열리는 전시 공간과 창고로 사용되고 있다.</p>
+			<br><br>
+			<!-- 구글 지도 사용 -->
+			<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.3218212549164!2d7.612519715507954!3d47.600431679184204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791ba3d51416b0d%3A0xd7cb3fef18f5a581!2sVitra%20Fire%20Station%20by%20Zaha%20Hadid!5e0!3m2!1sko!2skr!4v1606195652057!5m2!1sko!2skr" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+			<p><img src="img/map.png" width="22" height="22" alt=""/>&nbsp;Müllheimer Str. 56, 79576 Weil am Rhein, 독일 
+			<br><img src="img/clock.png" width="20" height="20" alt=""/>&nbsp;임시휴업
+			<br><img src="img/money.png" width="20" height="20" alt=""/>&nbsp;부분 유료
+			<br><img src="img/home.png" width="20" height="20" alt=""/>&nbsp;<a href="https://www.vitra.com/en-un/about-vitra/campus/architecture/architecture-fire-station"><u>vitra.com</u></a></p>
+		</div>
+		<!-- 페이지 넘기는 페이지 바 박스 -->
+		<div id="page_number_box">
+			<a href="#">⮜</a>
+			&nbsp;<a href="Zaha Hadid_Archi_1.html"><strong>1</strong></a>&nbsp;
+			<a href="Zaha Hadid_Archi_2.html">2</a>&nbsp;
+			<a href="Zaha Hadid_Archi_3.html">3</a>&nbsp;
+			<a href="Zaha Hadid_Archi_4.html">4</a>&nbsp;
+			<a href="Zaha Hadid_Archi_5.html">5</a>&nbsp;
+			<a href="Zaha Hadid_Archi_2.html">⮞</a>
+		</div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

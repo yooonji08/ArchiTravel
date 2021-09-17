@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Archi Travel &gt; Log</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<link rel="stylesheet" href="log_frame.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1500px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지 바 설정 */
+		#page_number_box {
+			height: 20px;
+			width: 500px;
+			margin-top: 500px;
+			margin-left: 500px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+		  <!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				<li><a href="Log.html">Log</a></li>
+				<li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				<li><a href="Course.html">Course</a>&nbsp;</li>
+				<li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		  </div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 나라별 여행지 선택 배너 박스 -->
+		<div class="archi_box">
+			<hr>
+		  	<table cellspacing="15">
+			  	<tr>
+					<td><strong>인기 여행지&nbsp;</strong></td>
+					<td><a href="Course_Germany.html">독일</a>&nbsp;</td>
+					<td><a href="#">대한민국</a>&nbsp;</td>
+					<td><a href="#">프랑스</a>&nbsp;</td>
+					<td><a href="#">일본</a>&nbsp;</td>
+					<td><a href="#">영국</a>&nbsp;</td>
+					<td><a href="#">이탈리아</a>&nbsp;</td>
+					<td><a href="#">미국</a>&nbsp;</td>
+					<td><a href="#">스위스</a>&nbsp;</td>
+					<td><a href="#">브라질</a>&nbsp;</td>
+					<td><a href="#">스페인</a>&nbsp;</td>
+			  	</tr>
+		  	</table>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>전국 여행지</strong></td>
+					<td>
+						<!-- select태그로 여러개의 나라 중 한 항목만 선택하면 해당 나라 추천 코스 웹페이지로 이동 -->
+						<select style="width: 80px" onchange="window.open(this.value)">
+							<optgroup label="아시아">
+								<option value="#">대한민국</option>
+								<option value="#">일본</option>
+								<option value="#">중국</option>
+							</optgroup>
+							<optgroup label="유럽">
+								<option value="#">그리스</option>
+								<option value="#">독일</option>
+								<option value="#">스위스</option>
+								<option value="#">스페인</option>
+								<option value="#">영국</option>
+								<option value="#">이탈리아</option>
+								<option value="#">프랑스</option>
+							</optgroup>
+							<optgroup label="아메리카">
+								<option value="#">미국</option>
+								<option value="#">브라질</option>
+							</optgroup>
+							<optgroup label="아프리카">
+								<option value="#">가나</option>
+							</optgroup>
+							<optgroup label="오세아니아">
+								<option value="#">뉴질랜드</option>
+								<option value="#">오스트레일리아</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>  
+			</table>
+	  		<hr>
+		</div>
+		<!-- 여행지 글자와 그림 위치 박스 -->
+		<div class="trip_tape">
+			<img id="tape" src="img/tape.png" width="15" height="50" alt=""/><h3>&nbsp;인기 여행지</h3>
+		</div>
+		<!-- 여행지 게시글들 박스 -->
+		<div class="trip_log">
+			<!-- 여행지 게시글 박스 -->
+		    <div class="trip_log_box"><a href="Log_1.html"><img src="img/log/log_front_01.png" width="300" height="298" alt=""/></a>
+			  	<h4><a href="Log_1.html">독일 비트라 건축 여행</a></h4>
+			  	<p style="font-size: 13px; color: #9F9F9F;">2020.11.27.&nbsp;&nbsp;&nbsp;<img src="img/heart.png" width="14" height="12" alt=""/>&nbsp;32</p>
+			</div>
+			<div class="trip_log_box"> <a href="#"><img src="img/log/log_26.png" width="300" height="298" alt=""/></a>
+				<h4><a href="#">서울 도심속 건축물 탐방</a></h4>
+				<p style="font-size: 13px; color: #9F9F9F;">2020.11.28.&nbsp;&nbsp;&nbsp;<img src="img/heart.png" width="14" height="12" alt=""/>&nbsp;28</p>
+			</div>
+			<div class="trip_log_box"> <a href="#"><img src="img/log/log_27.PNG" width="300" height="298" alt=""/></a>
+				<h4><a href="#">제주도로 떠나는 안도다다오 건축 여행</a></h4>
+				<p style="font-size: 13px; color: #9F9F9F;">2020.11.29.&nbsp;&nbsp;&nbsp;<img src="img/heart.png" width="14" height="12" alt=""/>&nbsp;22</p>
+			</div>
+			<div class="trip_log_box"> <a href="#"><img src="img/log/log_28.PNG" width="300" height="298" alt=""/></a>
+				<h4><a href="#">일본 베니스 집에서 즐기는 풍경</a></h4>
+				<p style="font-size: 13px; color: #9F9F9F;">2020.11.29.&nbsp;&nbsp;&nbsp;<img src="img/heart.png" width="14" height="12" alt=""/>&nbsp;17</p>
+			</div>
+		</div>
+		<!-- 페이지 이동 박스 -->
+		<div id="page_number_box">
+			<a href="#">⮜</a>
+			&nbsp;<a href="#"><strong>1</strong></a>&nbsp;
+			<a href="#">2</a>&nbsp;
+			<a href="#">3</a>&nbsp;
+			<a href="#">4</a>&nbsp;
+			<a href="#">5</a>&nbsp;
+			<a href="#">⮞</a>
+	    </div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

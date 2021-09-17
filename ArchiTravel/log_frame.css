@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 그림과 글자가 나란히 있도록 float 속성의 left 설정 */
+#tape, #tape_sum, h3 {
+	float: left;
+}
+/* 여행지 글자 위치 설정 */
+.trip_tape {
+    margin-left: 110px;
+    width: 980px;
+    height: 50px;
+    margin-top: 30px;
+}
+/* 여행지 게시글들 박스 설정 */
+.trip_log {
+    margin-left: 110px;
+    width: 980px;
+    height: 500px;
+    margin-top: 30px;
+}
+/* 여행지 게시글 박스 서식 설정 */
+.trip_log_box {
+    float: left;
+    margin: 10px;
+    width: 300px;
+}
+/* 로그의 사진과 설명 요약 갤러리 서식 설정 박스 */
+.log_sum_text {
+	margin-left: 120px;
+	height: 780px;
+	margin-top: 100px;
+	width: 850px;
+	float: left;
+}
+/* 게시글의 내용 박스 */
+.log_text {
+	margin-left: 150px;
+	height: 10200px;
+	margin-top: 930px;
+	width: 850px;
+}

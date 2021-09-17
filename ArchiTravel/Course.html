@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Archi Travel &gt; Course</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<link rel="stylesheet" href="Course_frame.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1600px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지바 설정 */
+		#page_number_box {
+			height: 20px;
+			margin-top: 900px;
+			width: 150px;
+			margin-left: 500px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+	  <div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+	  	<!-- 네비게이션 설정 -->
+		<div class="nav_top">
+		  <nav class="left_nav">
+			<ul>
+				<li><a href="Log.html">Log</a></li>
+				<li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				<li><a href="Course.html">Course</a>&nbsp;</li>
+				<li><a href="Architect.html">Architect</a>&nbsp;</li>
+			</ul>
+		  </nav>
+		  <nav class="right_nav">
+			<ul>
+			  <li><input name="검색" type="search">
+			  <img src="img/find.png" width="20" height="20" alt=""/></li>
+			  <li><a href="SignUp.html">SIGNUP</a></li>
+			  <li><a href="Login.html">LOGIN</a></li>
+			  <li><a href="About.html">ABOUT</a></li>
+			</ul>
+		  </nav>
+		</div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 코스 버튼 박스 -->
+		<div id="trip_img">
+		    <img src="img/trip_main.png" width="1200" height="380" alt=""/>
+			<form>
+				<div id="course_button"><input onclick="alert('업데이트 예정입니다.')" name="course" type="image" formaction="#.html" id="course" src="img/trip_course.png" width="200" height="46"></div>
+				<div id="trip_button_1"><input name="family" type="image" formaction="Course_family.html" id="family" src="img/trip_family.png" width="180" height="54"></div>
+				<div id="trip_button_2"><input name="solo" type="image" formaction="#.html" id="solo" src="img/trip_solo.png" width="180" height="54"></div>
+				<div id="trip_button_3"><input name="walk" type="image" formaction="#.html" id="walk" src="img/trip_walk.png" width="180" height="54"></div>	
+				<div id="trip_button_4"><input name="healing" type="image" formaction="#.html" id="healing" src="img/trip_healing.png" width="180" height="54"></div>	
+				<div id="trip_button_5"><input name="animal" type="image" formaction="#.html" id="animal" src="img/trip_animal.png" width="223" height="55"></div>
+			</form>
+		</div>
+		<!-- 나라별 여행지 선택 배너 박스 -->
+		<div class="archi_box">
+	  		<hr>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>인기 여행지&nbsp;</strong></td>
+					<td><a href="Course_Germany.html">독일</a>&nbsp;</td>
+					<td><a href="#">대한민국</a>&nbsp;</td>
+					<td><a href="#">프랑스</a>&nbsp;</td>
+					<td><a href="#">일본</a>&nbsp;</td>
+					<td><a href="#">영국</a>&nbsp;</td>
+					<td><a href="#">이탈리아</a>&nbsp;</td>
+					<td><a href="#">미국</a>&nbsp;</td>
+					<td><a href="#">스위스</a>&nbsp;</td>
+					<td><a href="#">브라질</a>&nbsp;</td>
+					<td><a href="#">스페인</a>&nbsp;</td>
+				</tr>
+			</table>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>전국 여행지</strong></td>
+					<td>
+						<!-- select태그로 여러개의 나라 중 한 항목만 선택하면 해당 나라 추천 코스 웹페이지로 이동 -->
+						<select style="width: 80px" onchange="window.open(this.value)">
+							<optgroup label="아시아">
+								<option value="#">대한민국</option>
+								<option value="#">일본</option>
+								<option value="#">중국</option>
+							</optgroup>
+							<optgroup label="유럽">
+								<option value="#">그리스</option>
+								<option value="Course_Germany.html">독일</option>
+								<option value="#">스위스</option>
+								<option value="#">스페인</option>
+								<option value="#">영국</option>
+								<option value="#">이탈리아</option>
+								<option value="#">프랑스</option>
+							</optgroup>
+							<optgroup label="아메리카">
+								<option value="#">미국</option>
+								<option value="#">브라질</option>
+							</optgroup>
+							<optgroup label="아프리카">
+								<option value="#">가나</option>
+							</optgroup>
+							<optgroup label="오세아니아">
+								<option value="#">뉴질랜드</option>
+								<option value="#">오스트레일리아</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>  
+			</table>
+	  		<hr>
+		</div>
+		<!-- 코스 정렬 박스 -->
+		<div class="course_box_01">
+			<a href="Course_Germany_1.html"><img class="course_box_img" src="img/trip_1.png" width="320" height="364" alt=""/></a>
+			<a href="#"><img class="course_box_img" src="img/trip_4.png" width="320" height="304" alt=""/></a>
+			
+		</div>
+		<div class="course_box_02">
+			<a href="#"><img class="course_box_img" src="img/trip_2.png" width="320" height="293" alt=""/></a>
+	    	<a href="#"><img src="img/trip_5.png" width="320" height="286" alt=""/></a>
+		</div>
+		<div class="course_box_02">
+			<a href="#"><img class="course_box_img" src="img/trip_3.png" width="320" height="329" alt=""/></a>
+		</div>
+		<!-- 페이지 이동 박스 -->
+		<div id="page_number_box">
+			<a href="#">⮜</a>
+			&nbsp;<a href="Course.html"><strong>1</strong></a>&nbsp;
+			<a href="#">2</a>&nbsp;
+			<a href="#">3</a>&nbsp;
+			<a href="#">4</a>&nbsp;
+			<a href="#">5</a>&nbsp;
+			<a href="#">⮞</a>
+	    </div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*중앙정렬 레이아웃*/
+* { margin: 0; padding: 0; }
+body {
+	width: 960px;
+	margin: 0 auto;
+}
+/* 하이퍼링크의 색깔, 방문한 기록, 마우스를 오버시켰을 때의 색깔을 회색의로 설정 */
+a:link {
+	color: #777777;
+	text-decoration: none;
+}
+a:visited {
+	color: #777777;
+	text-decoration: none;
+}
+a:hover {
+	color: #777777;
+	text-decoration: none;
+}
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+/* 로고위치를 중앙에 설정 */
+.Login_logo {
+	height: 80px;
+	width: 350px;
+	margin-top: 80px;
+	margin-left: 290px;
+	margin-bottom: 45px;
+}
+/* 로그인 박스의 위치와 서식 설정 */
+.login_box {
+	font-family: "맑은 고딕", "돋움체";
+	height: 510px;
+	margin-left: 250px;
+	width: 650px;
+}
+/* footer의 위치 설정 */
+.footer_bottom02 {
+	margin: 0px;
+	height: 10px;
+	width: 270px;
+	padding-left: 350px;
+	font-size: 10px;
+}

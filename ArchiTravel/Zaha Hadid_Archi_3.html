@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Zaha Hadid 건축물</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1750px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지바 설정 */
+		#page_number_box {
+			height: 20px;
+			width: 500px;
+			margin-top: 180px;
+			margin-left: 550px;
+		}
+	</style>
+	<!-- 타이머 함수를 사용하여 3초에 이미지가 1개 나타나는 애니메이션 구현 -->
+	<script>
+		window.onload = function() {
+		var count = 0;
+		var image = document.getElementById('image');
+		var frames = [
+			'img/Zaha Hadid/DDP.jpg', 'img/Zaha Hadid/DDP_2.jpg', 'img/Zaha Hadid/DDP_3.jpg',
+			'img/Zaha Hadid/DDP_4.jpg', 'img/Zaha Hadid/DDP_5.jpg', 'img/Zaha Hadid/DDP_6.jpg',
+		];
+		setInterval(function() {
+			image.src = frames[count % frames.length];
+			count = count + 1;
+		}, 3000/1);
+	};
+	</script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+			<!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				  <li><a href="Log.html">Log</a></li>
+				  <li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				  <li><a href="Course.html">Course</a>&nbsp;</li>
+				  <li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		</div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 건축가 선택할 수 있는 박스 -->
+		<div class="archi_box">
+			<hr>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>건축가</strong></td>
+					<td style="color: #444444"><a href="Zaha Hadid.html"><strong>자하 하디드</strong></a></td>
+					<td><a href="#">안도 다다오</a></td>
+					<td><a href="#">프랭크 게리</a></td>
+					<td><a href="#">노만 포스터</a></td>
+					<td><a href="#">아이 엠 페이</a></td>
+				</tr>
+			</table>
+			<hr>
+			<!-- 서브메뉴 아래에 메뉴 2개 박스 설정 -->
+			<table id="bottom_menu" cellpadding="5">
+				<tr>
+					<td><a href="Zaha Hadid_Archi_1.html"><strong>건축물</strong></a></td>
+					<td><a href="Zaha Hadid_map.html">지도</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 에니메이션 사진 박스 -->
+		<div class="archi_sum">
+			<img src="img/Zaha Hadid/DDP.jpg" width="650" class="archi_sum_img" id="image">
+		</div>
+		<!-- 건축물 설명글 박스 -->
+		<div class="archi_text">
+			<p style="font-size: 20px"><strong>Dongdaemun Design Plaza(동대문 디자인 플라자)</strong>(2014)</p>
+			<p style="font-size: 12px">서울특별시 중구 을지로 281 DDP(20필지, 옛 동대문운동장 터)</p>
+			<br>
+			<p style="font-size: 14px"><strong>#환유의 풍경 &nbsp; #45,133장 외장패널공사 &nbsp; #메가 트러스 공법 &nbsp; #액체의 흐름을 연상</strong></p>
+			<p>동대문디자인플라자(이하 DDP)는 자유분방하고 물결치듯 이어지는 곡선과 더불어 기둥이 보이지 않는 실내를 구현하기 위해서 메가트러스와 스페이스 프레임(Space Frame)이 적용되었다. 스페이스 프레임으로 장스팬과 곡면을 구현하면서 캔틸레버(Cantilever) 방식의 스페이스 프레임을 지지하기 위해 일반건축물이 아닌 교량 등의 큰 구조물에 들어가는 메가트러스를 사용했다. 이러한 기술적 기반으로 DDP 내부에 기둥이 없는 대형 공간들을 만들 수 있었다.</p>
+
+			<p>한 장도 같은 것이 없는 45,133장의 알루미늄 패널. DDP와 일반 건축물의 가장 큰 차이점은 외관의 대부분을 차지하는 세계 최대 규모의 비정형 외장 패널이다. DDP 외관의 대부분을 차지하고 있는 외장 패널은 45,133장의 규격 및 곡률, 크기가 전부 달라 기존 생산방식 및 시공방법으로는 디자인구현, 품질확보, 공기 준수가 불가하고 국내·외에 벤치마킹할 수 있는 사례가 전무했다. 외장패널 공사를 삼성물산은 선박, 항공기, 자동차 등 모든 금속 성형분야의 기술들을 총 망라하여 세계 최초로 2차곡면 성형 및 절단 장비를 제작했다.</p>
+			<br><br>
+			<!-- 구글 지도 사용 -->
+			<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.504060126472!2d127.0073163151679!3d37.56674667979792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca33ce3e03fb9%3A0x831abf7f621c7999!2z64-Z64yA66y465SU7J6Q7J247ZSM65287J6Q!5e0!3m2!1sko!2skr!4v1606196051864!5m2!1sko!2skr" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+			<p><img src="img/map.png" width="22" height="22" alt=""/>&nbsp;서울특별시 중구 을지로 281 DDP(20필지, 옛 동대문운동장 터) 
+			<br><img src="img/clock.png" width="20" height="20" alt=""/>&nbsp;평일 10:00 - 21:00
+			<br><img src="img/money.png" width="20" height="20" alt=""/>&nbsp;부분 무료
+			<br><img src="img/home.png" width="20" height="20" alt=""/>&nbsp;<a href="https://www.ddp.or.kr/main"><u>https://www.ddp.or.kr/</u></a></p>
+		</div>
+		<!-- 페이지 넘기는 페이지 바 박스 -->
+		<div id="page_number_box">
+			<a href="#">⮜</a>
+			&nbsp;<a href="Zaha Hadid_Archi_2.html">1</a>&nbsp;
+			<a href="Zaha Hadid_Archi_2.html">2</a>&nbsp;
+			<a href="Zaha Hadid_Archi_3.html"><strong>3</strong></a>&nbsp;
+			<a href="Zaha Hadid_Archi_4.html">4</a>&nbsp;
+			<a href="Zaha Hadid_Archi_5.html">5</a>&nbsp;
+			<a href="Zaha Hadid_Archi_4.html">⮞</a>
+		</div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

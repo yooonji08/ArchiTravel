@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Archi Travel</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<style>
+		/* section 박스 */
+		.front_box {
+			width: 1500px;
+			height: 1000px;
+			padding-top: 120px;
+			margin-right: 0px;
+		}
+		/* 메인이미지 박스 위치 설정, 절대 위치 사용을 위해 position을 relative로 설정 */
+		.main_img_box {
+			overflow: hidden;
+			position: relative;
+			width: 1220px;
+			height: 700px;
+			float: left;
+			margin-left: 150px;
+			margin-top: 80px;
+		}
+		/* 메인이미지 절대 위치 사용을 위해 position을 relative로 설정 */
+		.main_img {
+			overflow: hidden;
+			position: relative;
+			width: 1220px;
+			height: 700px;
+			float: left;
+		}
+		/* 메인 이미지안에 텍스트를 position 속성의 relative를 사용하여 절대 위치로 요소 배치 */
+		.main_img_text {
+			width: 550px;
+			position: absolute;
+			left: 200px;
+			float: left;
+			top: 200px;
+		}
+		/* 이전 갤러리로 이동하는 버튼의 위치를 position 속성에 absolute를 넣어 절대 위치로 설정 */
+		#left-button {
+			position: absolute;
+			top: 500px;
+			left: 40px;
+		}
+		/* 다음 갤러리로 이동하는 버튼의 위치를 position 속성에 absolute를 넣어 절대 위치로 설정 */
+		#right-button {
+			position: absolute;
+			left: 1410px;
+			top: 500px;
+		}
+    </style>
+	<script>
+		/* 페이지 들어오면 알림 출력 */
+		alert('안녕하세요, Archi Travel입니다.')
+		
+		/* 팝업 이미지 창 실행 */
+		function MM_openBrWindow(theURL,winName,features) { //v2.0
+  		window.open(theURL,winName,features);
+		}
+		
+		/* 메인 갤러리 구현 이벤트 */
+		$(document).ready(function() {
+                var width = $('[data-role="slider"]').attr('data-width');
+                var height = $('[data-role="slider"]').attr('data-height');
+                var count = $('[data-role="slider"] div.item').length;
+
+                $('[data-role="slider"]').css({
+                    position: 'relative',
+                    overflow: 'hidden',
+                    width: width,
+                    height: height
+                }).find('.container').css({
+                    position: 'absolute',
+                    width: count * width,
+                    overflow: 'hidden'
+                }).find('.item').css({
+                    width: width,
+                    height: height,
+                    float: 'left'
+                });
+
+                var currentPage = 0;
+                var changePage = function() {
+                    $('[data-role="slider"] > .container').animate({
+                        left: -currentPage * width
+                    }, 500);
+                };
+
+                $('#left-button').click(function() { 
+                    if (currentPage > 0) {
+                        currentPage = currentPage - 1;
+                        changePage();
+                    }
+                });
+
+                $('#right-button').click(function() {
+                    if (currentPage < count - 1) {
+                        currentPage = currentPage + 1;
+                        changePage();
+                    }
+                });
+            });
+	</script>
+</head>
+<!-- 업데이트 공지를 팝업이미지로 띄우기 -->
+<body onLoad="MM_openBrWindow('popUp.html','notice','width=368,height=370')">
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+		  <!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				<li><a href="Log.html">Log</a></li>
+				<li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				<li><a href="Course.html">Course</a>&nbsp;</li>
+				<li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		  </div>
+	</header>
+	<!-- section 설정 -->
+	<section class="front_box">
+		<!-- 이전 갤러리 보기 버튼 -->
+		<img src="img/previous.png" width="45" height="47" id="left-button">
+		<!-- 갤러리 이미지 박스 -->
+		<div class="main_img_box">
+			<div data-role="slider" data-width="1220" data-height="700">
+				<div class="container">
+					<!-- 이미지와 글 박스 -->
+					<div class="main_img">
+						<!-- 이미지 위치 설정 박스 -->
+						<div class="item">
+							<img src="img/gallery/img_01.jpg" width="1220" height="700">
+							<!-- 글 위치 설정 박스 -->
+							<div class="main_img_text">
+							  <p style="font-size: 40px; color: #FFFFFF;"><strong>독일 비트라 캠퍼스 여행</strong></p>
+							  	<p style="font-size: 16px; color: #FFFFFF;">가족들과 함께 독일의 남쪽에 있는 바일 암 라인에 다녀왔다. 바일 암 라인은 스위스 국경과 맞닿아 있는 곳이다...</p>
+							  	<br><br>
+							  	<p><a href="Log_1.html"><img src="img/go.png" width="45" height="44"></a></p>
+							</div>
+						</div>
+					</div>
+					<div class="main_img">
+						<div class="item">
+							<img src="img/Zaha Hadid/DDP_2.jpg" width="1220" height="700">
+							<div class="main_img_text">
+							  <p style="font-size: 40px; color: #FFFFFF;"><strong>서울 도심속 건축물 탐방</strong></p>
+							  	<p style="font-size: 16px; color: #FFFFFF;">서울에는 유명한 건축가분들의 건축물들이 많이 있습니다. 오늘 첫번째로 방문할 곳은 동대문 디자인 플라자(DDP)입니다. 이곳은 건축가 자하 하디드가...</p>
+							  	<br><br>
+								<p><a href="#"><img src="img/go.png" width="45" height="44"></a></p>
+							</div>
+						</div>
+					</div>
+					<div class="main_img">
+						<div class="item">
+							<img src="img/log/log_24.PNG" width="1220" height="700">
+							<div class="main_img_text">
+								<p style="font-size: 40px; color: #FFFFFF;"><strong>제주도로 떠나는 안도다다오 건축 여행</strong></p>
+							  	<p style="font-size: 16px; color: #FFFFFF;">일본 건축가인 안도 다다오는 제주도에 여러 건축물들을 설계했습니다. 본태 미술관, 글라스 하우스, 지니어스 로사이 등이 있는데요, ...</p>
+							  	<br><br>
+							  	<p><a href="#"><img src="img/go.png" width="45" height="44"></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 다음 갤러리 보기 버튼 -->
+		<img src="img/next.png" width="45" height="45" id="right-button">
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link href="Login_frame.css" rel="stylesheet" type="text/css">
+	<title>Archi Travel SignUp</title>
+	<style>
+		/* 입력양식과 글자들의 위치 조정 */
+		.box_center {
+			height: 320px;
+			width: 330px;
+			margin-left: 50px;
+		}
+		/* 입력양식 그룹의 서식 설정 */
+		fieldset {
+			padding-top: 40px;
+			padding-right: 40px;
+			padding-left: 40px;
+			padding-bottom: 40px;
+			}
+	</style>
+	<script>
+		/* 제출버튼을 누르면 메세지가 출력되도록 설정 */
+		var sub = input[name="submit"];
+		if (sub.onclick)
+			alert("가입되었습니다.");
+	</script>
+</head>
+
+<body>
+ 	<main>
+		<div class="Login_logo">
+		  <a href="Main.html"><img src="img/logo.jpg" width="350" height="70" alt=""/></a>
+ 	 	</div>
+ 	 	<div class="login_box">
+			<div class="box_center">
+		  		<form if="form1" name="form1" method="post">
+					<!-- 회원가입 입력양식 그룹 생성 -->
+					<fieldset>
+						<legend></legend>
+							<table>
+					  			<tr>
+							  		<td><label for="아이디">아이디&nbsp;</label></td>
+							  		<td><input name="아이디" type="text" id="아이디" maxlength="30"></td>
+					  			</tr>
+					  			<tr>
+									<td><label for="password_01">비밀번호</label></td>
+									<td><input name="password_01" type="password" id="password_01" maxlength="30"></td>
+					  			</tr>
+					  			<tr>
+									<td><label for="password_02">비밀번호 재확인</label></td>
+									<td><input name="password_02" type="password" id="password_02"></td>
+					  			</tr>
+					  			<tr><td><br></td></tr>
+					  			<tr>
+									<td><label for="name">이름</label></td>
+									<td><input name="name" id="name" type="text"></td>
+					  			</tr>
+					  			<tr>
+									<td><label for="date">생년월일</label></td>
+									<td><input name="date" type="date" id="date" max="2020-12-1"></td>
+					  			</tr>
+					  			<tr>
+									<!-- 라디오 버튼 적용, <input>태그의 radio 속성을 이용해 입력 양식 생성, 남자와 여자중 하나만 선택되도록 name을 gender로 통일 -->
+									<td>성별</td>
+									<td>
+										<input type="radio" name="gender" id="radio" value="woman">
+										<label for="woman">여자</label>
+										<input type="radio" name="gender" id="radio2" value="man">
+										<label for="man">남자</label>
+									</td>
+					  			</tr>
+					  			<tr>
+									<td><label for="email">이메일</label></td>
+									<td><input name="email" type="email" id="email"></td>
+					  			</tr>
+					  			<tr><td><br></td></tr>
+					  			<tr>
+									<td><label for="tel">휴대전화</label></td>
+									<td>
+										<!-- <select> 태그를 이용하여 나라 전화번호 중 하나만 선택 -->
+									    <select>
+											<option>대한민국 +82</option>
+											<option>일본 +81</option>
+											<option>중국 +86</option>
+											<option>홍콩 +852</option>
+										</select>
+									</td>
+					  			</tr>
+					  			<tr>
+									<td></td>
+									<td><input name="tel" type="tel" id="tel"></td>
+					  			</tr>
+							</table>
+					</fieldset>
+		   			<br>
+		   			<input name="submit" type="image" id="submit" src="img/signup.png" width="330" height="45" onclick="alert('가입되었습니다.')">
+				</form>
+			</div>
+  		</div>
+	</main>
+	<!-- 시맨틱 태그 중 footer태그를 사용하여 꼬리말 설정 -->
+	<footer class="footer_bottom02">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</footer>
+</body>
+</html>

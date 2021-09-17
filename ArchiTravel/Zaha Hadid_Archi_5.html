@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Zaha Hadid 건축물</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1750px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지바 설정 */
+		#page_number_box {
+			height: 20px;
+			width: 500px;
+			margin-top: 180px;
+			margin-left: 550px;
+		}
+	</style>
+	<!-- 타이머 함수를 사용하여 3초에 이미지가 1개 나타나는 애니메이션 구현 -->
+	<script>
+		window.onload = function() {
+		var count = 0;
+		var image = document.getElementById('image');
+		var frames = [
+			'img/Zaha Hadid/heydar_1.jpg', 'img/Zaha Hadid/heydar_2.jpg', 'img/Zaha Hadid/heydar_3.jpg',
+			'img/Zaha Hadid/heydar_4.jpg', 'img/Zaha Hadid/heydar_5.jpg', 'img/Zaha Hadid/heydar_6.jpg',
+			'img/Zaha Hadid/heydar_7.jpg',
+		];
+		setInterval(function() {
+			image.src = frames[count % frames.length];
+			count = count + 1;
+		}, 3000/1);
+	};
+	</script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+			<!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				  <li><a href="Log.html">Log</a></li>
+				  <li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				  <li><a href="Course.html">Course</a>&nbsp;</li>
+				  <li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		</div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 건축가 선택할 수 있는 박스 -->
+		<div class="archi_box">
+			<hr>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>건축가</strong></td>
+					<td style="color: #444444"><a href="Zaha Hadid.html"><strong>자하 하디드</strong></a></td>
+					<td><a href="#">안도 다다오</a></td>
+					<td><a href="#">프랭크 게리</a></td>
+					<td><a href="#">노만 포스터</a></td>
+					<td><a href="#">아이 엠 페이</a></td>
+				</tr>
+			</table>
+			<hr>
+			<!-- 서브메뉴 아래에 메뉴 2개 박스 설정 -->
+			<table id="bottom_menu" cellpadding="5">
+				<tr>
+					<td><strong><a href="Zaha Hadid_Archi_1.html">건축물</a></strong></td>
+					<td><a href="Zaha Hadid_map.html">지도</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 에니메이션 사진 박스 -->
+		<div class="archi_sum">
+			<img src="img/Zaha Hadid/heydar_1.jpg" width="650" class="archi_sum_img" id="image">
+		</div>
+		<!-- 건축물 설명글 박스 -->
+		<div class="archi_text">
+			<p style="font-size: 20px"><strong>Heydar Aliyev Center(하이드라 알리예프 문화 센터)</strong>(2012)</p>
+			<p style="font-size: 12px">Baku, Azerbaijan(바쿠, 아제르바이젠)</p>
+			<br>
+			<p style="font-size: 14px"><strong>#곡선적 &nbsp; #랜드마크</strong></p>
+			<p>하이드라 알리예프 센터는 아제르바이잔 공화국의 전 대통령의 이름을 따서 만든 이름이다. 하이드라 알리예프 문화 센터는 1991년 아제르바이잔의 독립 도시 재개발의 상징으로 국제 공모된 작품이다. 자하 하디드는 2007년 이 센터의 설계 책임자로 임명되었다. 자신이 90년대 후반부터 꾸준히 추구해온 디지털 기법을 이용한 구조 건물 설계와 형태를 계산하는 파라메트릭 건축 스타일을 적용해 건물을 설계했다. 건물 내부에는 박물관, 1000석 규모의 강당, 다목적 홀, 임시 전시 공간, 콘퍼런스 센터 및 워크숍 공간이 있다. 각각의 기능은 고유의 정체성을 가지면서 또한 연속적이며 전체의 일부로 연계된다.</p>
+			  
+			<p>하디드는 이 건축물의 프로젝트를 경직되고 권위주의적인 소련 건축 양식에서, 새로 독립한 아제르바이잔이 낙관론을 더 유동적으로 반영할 수 있는 능력을 표현했다고 알려졌다.</p>
+			<br><br>
+			<!-- 구글 지도 사용 -->
+			<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10146.692225615996!2d49.86431262542047!3d40.398008538101195!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa8c2cbf267a83fbd!2z7Zek7J2064uk66W0IOyVjOumrOyYiOu4jCDshLzthLA!5e0!3m2!1sko!2skr!4v1606194718131!5m2!1sko!2skr" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+			<p><img src="img/map.png" width="22" height="22" alt=""/>&nbsp;1 Heydər Əliyev prospekti, Bakı 1033 아제르바이잔
+			<br><img src="img/clock.png" width="20" height="20" alt=""/>&nbsp;월요일 휴무, 평일 오전 11:00~오후 7:00, 금토일 오전 11:00~오후 6:00
+			<br><img src="img/money.png" width="20" height="20" alt=""/>&nbsp;성인 15마나트(KRW 10,550원)
+			<br><img src="img/home.png" width="20" height="20" alt=""/>&nbsp;<a href="http://heydaraliyevcenter.az/"><u>heydaraliyevcenter.az</u></a></p>
+		</div>
+		<!-- 페이지 넘기는 페이지 바 박스 -->
+		<div id="page_number_box">
+			<a href="#">⮜</a>
+			&nbsp;<a href="Zaha Hadid_Archi_4.html">1</a>&nbsp;
+			<a href="Zaha Hadid_Archi_2.html">2</a>&nbsp;
+			<a href="Zaha Hadid_Archi_3.html">3</a>&nbsp;
+			<a href="Zaha Hadid_Archi_4.html">4</a>&nbsp;
+			<a href="Zaha Hadid_Archi_5.html"><strong>5</strong></a>&nbsp;
+			<a href="#">⮞</a>
+		</div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

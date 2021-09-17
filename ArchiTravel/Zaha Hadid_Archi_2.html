@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Zaha Hadid 건축물</title>
+	<link rel="stylesheet" href="frame_2.css">
+	<link rel="stylesheet" href="architect_box.css">
+	<style>
+		/* section 박스 */
+		.main_box {
+			width: 1220px;
+			margin-left: 160px;
+			height: 1750px;
+			padding-top: 105px;
+		}
+		/* 페이지 넘기는 페이지바 설정 */
+		#page_number_box {
+			height: 20px;
+			width: 500px;
+			margin-top: 180px;
+			margin-left: 550px;
+		}
+	</style>
+	<!-- 타이머 함수를 사용하여 3초에 이미지가 1개 나타나는 애니메이션 구현 -->
+	<script>
+		window.onload = function() {
+		var count = 0;
+		var image = document.getElementById('image');
+		var frames = [
+			'img/Zaha Hadid/science_1.PNG', 'img/Zaha Hadid/science_2.png', 'img/Zaha Hadid/science_3.png',
+			'img/Zaha Hadid/science_4.jpg', 'img/Zaha Hadid/science_5.jpg', 'img/Zaha Hadid/science_6.jpg',
+		];
+		setInterval(function() {
+			image.src = frames[count % frames.length];
+			count = count + 1;
+		}, 3000/1);
+	};
+	</script>
+</head>
+<body>
+	<!-- 헤더 설정 -->
+	<header id="top_box">
+		<div id="top_logo"><a href="Main.html"><img src="img/logo.jpg" width="180" height="36" alt=""/></a></div>
+			<!-- 네비게이션 설정 -->
+		  <div class="nav_top">
+			<nav class="left_nav">
+			  <ul>
+				  <li><a href="Log.html">Log</a></li>
+				  <li><a href="Gallery.html">Gallery</a>&nbsp;</li>
+				  <li><a href="Course.html">Course</a>&nbsp;</li>
+				  <li><a href="Architect.html">Architect</a>&nbsp;</li>
+			  </ul>
+			</nav>
+			<nav class="right_nav">
+			  <ul>
+				<li><input name="검색" type="search">
+				<img src="img/find.png" width="20" height="20" alt=""/></li>
+				<li><a href="SignUp.html">SIGNUP</a></li>
+				<li><a href="Login.html">LOGIN</a></li>
+				<li><a href="About.html">ABOUT</a></li>
+			  </ul>
+			</nav>
+		</div>
+	</header>
+	<!-- section 설정 -->
+	<section class="main_box">
+		<!-- 건축가 선택할 수 있는 박스 -->
+		<div class="archi_box">
+			<hr>
+			<table cellspacing="15">
+				<tr>
+					<td><strong>건축가</strong></td>
+					<td style="color: #444444"><a href="Zaha Hadid.html"><strong>자하 하디드</strong></a></td>
+					<td><a href="#">안도 다다오</a></td>
+					<td><a href="#">프랭크 게리</a></td>
+					<td><a href="#">노만 포스터</a></td>
+					<td><a href="#">아이 엠 페이</a></td>
+				</tr>
+			</table>
+			<hr>
+			<!-- 서브메뉴 아래에 메뉴 2개 박스 설정 -->
+			<table id="bottom_menu" cellpadding="5">
+				<tr>
+					<td><a href="Zaha Hadid_Archi_1.html"><strong>건축물</strong></a></td>
+					<td><a href="Zaha Hadid_map.html">지도</a></td>
+				</tr>
+			</table>
+		</div>
+		<!-- 에니메이션 사진 박스 -->
+		<div class="archi_sum">
+			<img src="img/Zaha Hadid/science_1.PNG" width="650" class="archi_sum_img" id="image">
+		</div>
+		<!-- 건축물 설명글 박스 -->
+		<div class="archi_text">
+			<p style="font-size: 20px"><strong>Phaeno Science Center(파에노 과학 센터)</strong>(2005)</p>
+			<p style="font-size: 12px">Wolfsburg, Germany(볼프스부르크, 독일)</p>
+			<br>
+			<p style="font-size: 14px"><strong>#곡선 사용</strong></p>
+			<p>파에노 과학 센터는 독일 볼프스부르크(Wolfsburg)에 있는 과학 전문 전시관이다. 볼프스부르크 시는 시의 공유지 개발 계획의 일환으로 당초 미술관을 계획했으나 기존 미술관(Kunst Museum)과 기능이 겹치자 스위스 테크로라마(Technorama) 과학 센터와 같은 시설을 짓게 되었다. 공모전에서 당선된 중동 출신 건축가 자하 하디드가 건물을 설계했고 2005년 완공되었다. 아방 가르드(avant-garde) 풍의 3층 현대식 건물로서 건물 전체가 원뿔 모양 기둥들 위에 올려져 있다. 직각이 없는 부드러운 외면으로 우주선과 같은 독특한 형태로 유명한 건물이다.</p>
+
+			<p>이 과학 센터는 자연 과학과 기술 현상 350여 가지를 체험해 볼 수 있는 실험 장소를 갖추고 있다. 6m 가량의 소용돌이를 만들어내는 화염 토네이도(fire tornado), 철학적 질문에 답변하는 로봇 등 과학 쇼를 볼 수 있다. 또한 자이로스코프 타보기, 뇌파로 조정하는 마인드볼(Mindball) 게임, 자신의 눈 안에 혈관 보기, 비누 방울로 음악 소리 만들기, 플라스마(plasma) 만져보기 등을 체험해 볼 수 있다. 방문객 연구소, 과학 극장, 아이디어 포럼이 있어서 관람객들에게 더 많은 과학 지식 충족의 기회를 제공한다. 평일은 오전 9시부터 오후 5시까지, 주말과 공휴일은 오전 10시부터 오후 6시까지 문을 열고 월요일에는 쉰다.</p>
+			<br><br>
+			<!-- 구글 지도 사용 -->
+			<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.7723253061763!2d10.78862990775884!3d52.42892288213451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47af93b43ec446e5%3A0x3c97c2ad2a2ec3ae!2sPhaeno%20Science%20Center!5e0!3m2!1sko!2skr!4v1606195903898!5m2!1sko!2skr" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+			<p><img src="img/map.png" width="22" height="22" alt=""/>&nbsp;Willy-Brandt-Platz 1, 38440 Wolfsburg, 독일 
+			<br><img src="img/clock.png" width="20" height="20" alt=""/>&nbsp;임시휴업
+			<br><img src="img/money.png" width="20" height="20" alt=""/>&nbsp;어린이(5세이하) 무료, 어린이(6-17세) 9.00€, 성인 14.00€, 노인 11.00€
+			<br><img src="img/home.png" width="20" height="20" alt=""/>&nbsp;<a href="https://www.glasgowlife.org.uk/museums/venues/riverside-museum"><u>phaeno.de</u></a></p>
+		</div>
+		<!-- 페이지 넘기는 페이지 바 박스 -->
+		<div id="page_number_box">
+			<a href="Zaha Hadid_Archi_1.html">⮜</a>
+			&nbsp;<a href="Zaha Hadid_Archi_1.html">1</a>&nbsp;
+			<a href="Zaha Hadid_Archi_2.html"><strong>2</strong></a>&nbsp;
+			<a href="Zaha Hadid_Archi_3.html">3</a>&nbsp;
+			<a href="Zaha Hadid_Archi_4.html">4</a>&nbsp;
+			<a href="Zaha Hadid_Archi_5.html">5</a>&nbsp;
+			<a href="Zaha Hadid_Archi_3.html">⮞</a>
+		</div>
+	</section>
+	<!-- footer 박스 -->
+	<footer>
+		<div class="footer_box">
+			<p style="font-size: 20px; font-weight: bold; color: #FFFFFF;">Archi Travel</p>
+			<p><span style="color: #B6B6B6">서울특별시 노원구 화랑로 621 (01797)</span></p>
+			<p><span style="color: #F9FF00">TEL</span> <span style="color: #B6B6B6">2020-1121</span></p>
+			<p><span style="color: #F9FF00">EMAIL</span> <span style="color: #B6B6B6">yooonji08@naver.com</span></p>
+			<p style="color: #848484">COPYRIGHT 2020 YOON. ALL RIGHTS RESERVED.</p>
+		</div>
+	</footer>
+</body>
+</html>

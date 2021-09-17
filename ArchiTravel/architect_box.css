@@ -1,0 +1,25 @@
+@charset "utf-8";
+#bottom_menu {
+	margin-left: 90px;
+	font-size: 14px;
+}
+/* 여행지 선택 배너 박스 */
+.archi_box {
+	margin-top: 50px;
+	width: 1200px;
+}
+.archi_sum {
+	margin-left: 120px;
+	height: 350px;
+	margin-top: 100px;
+}
+.archi_sum_img {
+	float: left;
+	margin-right: 20px;
+}
+
+.archi_text {
+	margin-left: 120px;
+	width: 1000px;
+	
+}
